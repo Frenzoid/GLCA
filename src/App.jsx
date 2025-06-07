@@ -9,7 +9,7 @@ import './styles.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="app">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">

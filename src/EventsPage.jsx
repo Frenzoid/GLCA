@@ -171,7 +171,7 @@ const EventsPage = () => {
             <h3>Richiedi un Preventivo</h3>
             <p>Contattaci per organizzare il tuo evento perfetto</p>
             <div className="contact-buttons">
-              <a href="tel:+41918273587" className="cta-button">
+              <a href="tel:0766170055" className="cta-button">
                 📞 Chiama Ora
               </a>
               <a href="mailto:eventi@grottolauracasaana.ch" className="cta-button secondary">

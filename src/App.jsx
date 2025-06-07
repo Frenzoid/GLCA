@@ -15,7 +15,7 @@ function App() {
           <div className="container">
             <Link className="navbar-brand" to="/">
               <img src={logo} alt="Grotto Laura by Casa Ana" className="logo-img" />
-              Grotto Laura by Casa Ana
+              Grotto Laura by<br /> Casa Ana
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>

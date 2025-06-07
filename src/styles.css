@@ -127,6 +127,7 @@ body {
 }
 
 .hero-overlay-compact {
+  margin-top: 70px;
   background: rgba(15, 36, 16, 0.6);
   padding: 2.5rem 3rem;
   border-radius: 10px;
@@ -188,7 +189,7 @@ body {
   text-align: center;
   font-size: 3rem;
   color: var(--dark-green);
-  margin-bottom: 3rem;
+  margin: 3rem;
   position: relative;
 }
 
@@ -584,6 +585,7 @@ body {
 }
 
 .events-title {
+  margin-top: 3rem;
   font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--accent-gold);

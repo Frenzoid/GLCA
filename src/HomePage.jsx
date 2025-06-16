@@ -1,4 +1,4 @@
-import Logo from './assets/logo.png';
+import { FacebookEmbed } from 'react-social-media-embed';
 
 const HomePage = () => {
   const menuItems = {
@@ -275,7 +275,7 @@ const HomePage = () => {
               <div className="info-card">
                 <h4>📞 Prenotazioni o ordini da asporto</h4>
                 <p>076 617 00 55<br />
-                  info@grottolauracasaana.ch</p>
+                  casaanaristorante@yahoo.com</p>
               </div>
             </div>
           </div>
@@ -304,13 +304,13 @@ const HomePage = () => {
             <div className="col-lg-6">
               <h3 className="social-title">Seguici sui Social</h3>
               <div className="social-links">
-                <a href="#" className="social-link facebook">
+                <a href="https://www.facebook.com/profile.php?id=61575433280192" className="social-link facebook">
                   <span className="social-icon">📘</span>
                   <span>Facebook</span>
                 </a>
-                <a href="#" className="social-link instagram">
-                  <span className="social-icon">📷</span>
-                  <span>Instagram</span>
+                <a href="https://www.tiktok.com/@ristorante.casa.a" className="social-link instagram">
+                  <span className="social-icon">🎵</span>
+                  <span>TikTok</span>
                 </a>
                 <a href="#" className="social-link whatsapp">
                   <span className="social-icon">💬</span>
@@ -322,12 +322,20 @@ const HomePage = () => {
                 </a>
               </div>
               <div className="social-feed">
-                <h4>Ultime dal nostro Instagram</h4>
-                <div className="instagram-preview">
-                  <div className="insta-post">📸</div>
-                  <div className="insta-post">📸</div>
-                  <div className="insta-post">📸</div>
-                  <div className="insta-post">📸</div>
+                <h4>Ultime dal nostro Facebook</h4>
+                <div className="mb-2">
+                  <FacebookEmbed
+                    width={500}
+                    url="https://www.facebook.com/permalink.php?story_fbid=122121324356847776&id=61575433280192"
+                    placeholder={<div>Caricamento…</div>}
+                  />
+                </div>
+                <div className="mb-2">
+                  <FacebookEmbed
+                    width={500}
+                    url="https://www.facebook.com/permalink.php?story_fbid=122121066182847776&id=61575433280192"
+                    placeholder={<div>Caricamento…</div>}
+                  />
                 </div>
               </div>
             </div>

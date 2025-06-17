@@ -40,6 +40,12 @@ import item47 from './assets/menu/47.png'
 import item48 from './assets/menu/48.png'
 import mici2 from './assets/menu/mici2.jpg'
 
+// import logos
+import bookig from './assets/booking.svg';
+import facebook from './assets/facebook.png';
+import tiktok from './assets/tiktok.svg';
+import whatsapp from './assets/whatsapp.webp';
+
 // Constants
 const ALLERGEN_ICONS = {
   glutine: "🌾",
@@ -80,10 +86,29 @@ const RESTAURANT_INFO = {
     email: "casaanaristorante@yahoo.com"
   },
   social: {
-    facebook: "https://www.facebook.com/profile.php?id=61575433280192",
-    tiktok: "https://www.tiktok.com/@ristorante.casa.a"
+    facebook: {
+      url: "https://www.facebook.com/profile.php?id=61575433280192",
+      icon: facebook,
+      name: "Facebook"
+    },
+    whatsapp: {
+      url: "https://wa.me/41766170055",
+      icon: whatsapp,
+      name: "WhatsApp"
+    },
+    bookig: {
+      url: "https://www.booking.com/Share-QWPJCuU",
+      icon: bookig,
+      name: "Prenota ora"
+    },
+    tiktok: {
+      url: "https://www.tiktok.com/@ristorante.casa.a",
+      icon: tiktok,
+      name: "TikTok"
+    }
   }
 };
+
 
 // Menu Data
 const MENU_DATA = {
@@ -570,10 +595,20 @@ const InfoCard = ({ icon, title, content }) => (
   </div>
 );
 
-const SocialLink = ({ href, icon, children }) => (
-  <a href={href} className="social-link">
-    <span className="social-icon">{icon}</span>
-    <span>{children}</span>
+const SocialLink = ({ href, icon, children, iconType = "emoji" }) => (
+  <a href={href} className="social-link" target="_blank" rel="noopener noreferrer">
+    <span className="social-icon">
+      {iconType === "image" ? (
+        <img
+          src={icon}
+          alt={children}
+          className="social-icon-image"
+        />
+      ) : (
+        icon
+      )}
+    </span>
+    <span className="social-text">{children}</span>
   </a>
 );
 
@@ -661,6 +696,7 @@ const HomePage = () => {
         </div>
       </section>
 
+
       {/* Map and Social Section */}
       <section className="map-social-section">
         <div className="container">
@@ -683,18 +719,16 @@ const HomePage = () => {
             <div className="col-lg-6">
               <h3 className="social-title">Seguici sui Social</h3>
               <div className="social-links">
-                <SocialLink href={RESTAURANT_INFO.social.facebook} icon="📘">
-                  Facebook
-                </SocialLink>
-                <SocialLink href={RESTAURANT_INFO.social.tiktok} icon="🎵">
-                  TikTok
-                </SocialLink>
-                <SocialLink href="#" icon="💬">
-                  WhatsApp
-                </SocialLink>
-                <SocialLink href="#" icon="🦉">
-                  TripAdvisor
-                </SocialLink>
+                {Object.entries(RESTAURANT_INFO.social).map(([key, social]) => (
+                  <SocialLink
+                    key={key}
+                    href={social.url}
+                    icon={social.icon}
+                    iconType="image"
+                  >
+                    {social.name}
+                  </SocialLink>
+                ))}
               </div>
               <div className="social-feed">
                 <h4>Ultime dal nostro Facebook</h4>

@@ -325,14 +325,12 @@ const HomePage = () => {
                 <h4>Ultime dal nostro Facebook</h4>
                 <div className="mb-2">
                   <FacebookEmbed
-                    width={500}
                     url="https://www.facebook.com/permalink.php?story_fbid=122121324356847776&id=61575433280192"
                     placeholder={<div>Caricamento…</div>}
                   />
                 </div>
                 <div className="mb-2">
                   <FacebookEmbed
-                    width={500}
                     url="https://www.facebook.com/permalink.php?story_fbid=122121066182847776&id=61575433280192"
                     placeholder={<div>Caricamento…</div>}
                   />

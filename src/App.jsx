@@ -8,6 +8,7 @@ import EventsPage from './EventsPage';
 import logo from './assets/logo.png';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import './styles.css';
 
@@ -43,7 +44,7 @@ function App() {
       <div className="app">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">
-            <Link className="navbar-brand text-break" to="/" onClick={closeNavbar}>
+            <Link className="navbar-brand" to="/" onClick={closeNavbar}>
               <img src={logo} alt="Grotto Laura by Casa Ana" className="logo-img" />
               Albergo Ristorante Grotto Laura by<br /> Casa Ana
             </Link>
@@ -67,9 +68,6 @@ function App() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/gallery">Galleria</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/events">Eventi</Link>
-                </li>
               </ul>
             </div>
           </div>
@@ -78,7 +76,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/events" element={<EventsPage />} />
         </Routes>
 
         <footer className="footer">

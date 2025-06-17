@@ -1,5 +1,32 @@
 import React, { useState } from 'react';
 
+// Gallery asset imports
+import cold2 from './assets/gallery/cold2.jpg';
+import coldp1 from './assets/gallery/coldp1.jpg';
+import costite from './assets/gallery/costite.jpg';
+import evento from './assets/gallery/evento.jpg';
+import evento2 from './assets/gallery/evento2.jpg';
+import food1 from './assets/gallery/food1.jpg';
+import food2 from './assets/gallery/food2.jpg';
+import food3 from './assets/gallery/food3.jpg';
+import food4 from './assets/gallery/food4.jpg';
+import food5 from './assets/gallery/food5.jpg';
+import food6 from './assets/gallery/food6.jpg';
+import food7 from './assets/gallery/food7.jpg';
+import food8 from './assets/gallery/food8.jpg';
+import food9 from './assets/gallery/food9.jpg';
+import hotel1 from './assets/gallery/hotel1.jpg';
+import hotel2 from './assets/gallery/hotel2.jpg';
+import mici from './assets/gallery/mici.jpg';
+import mix1 from './assets/gallery/mix1.jpg';
+import outside1 from './assets/gallery/outside1.jpg';
+import salumi1 from './assets/gallery/salumi1.mp4';
+import salumi3 from './assets/gallery/salumi3.jpg';
+import table1 from './assets/gallery/table1.jpg';
+import table2 from './assets/gallery/table2.jpg';
+import table3 from './assets/gallery/table3.jpg';
+import table4 from './assets/gallery/table4.jpg';
+
 const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -8,55 +35,201 @@ const GalleryPage = () => {
       id: 1,
       title: "Mici Tradizionali",
       description: "Le nostre famose salsicce rumene alla griglia",
-      category: "piatti"
+      category: "piatti",
+      image: mici,
+      type: "image"
     },
     {
       id: 2,
-      title: "Casa Ana di Notte",
-      description: "L'atmosfera magica del nostro ristorante",
-      category: "ambiente"
+      title: "Specialità della Casa",
+      description: "Piatto principale con ingredienti freschi",
+      category: "piatti",
+      image: food1,
+      type: "image"
     },
     {
       id: 3,
-      title: "Mămăligă cu Brânză",
-      description: "Polenta tradizionale con formaggio e uovo",
-      category: "piatti"
+      title: "Antipasti Rumeni",
+      description: "Selezione di antipasti tradizionali",
+      category: "piatti",
+      image: food2,
+      type: "image"
     },
     {
       id: 4,
-      title: "Terrazza Estiva",
-      description: "Il nostro spazio esterno sotto le viti",
-      category: "ambiente"
+      title: "Piatto del Giorno",
+      description: "Specialità preparata con ricette tradizionali",
+      category: "piatti",
+      image: food3,
+      type: "image"
     },
     {
       id: 5,
-      title: "Platto Misto Speciale",
-      description: "Assortimento di carni alla griglia",
-      category: "piatti"
+      title: "Cucina Rumena",
+      description: "Autentici sapori della Romania",
+      category: "piatti",
+      image: food4,
+      type: "image"
     },
     {
       id: 6,
-      title: "Sala Principale",
-      description: "L'interno accogliente del nostro grotto",
-      category: "ambiente"
+      title: "Pranzo Speciale",
+      description: "Menu completo con portate tradizionali",
+      category: "piatti",
+      image: food5,
+      type: "image"
     },
     {
       id: 7,
-      title: "Sarmale",
-      description: "Involtini di cavolo fatti in casa",
-      category: "piatti"
+      title: "Griglia Mista",
+      description: "Assortimento di carni alla griglia",
+      category: "piatti",
+      image: food6,
+      type: "image"
     },
     {
       id: 8,
-      title: "Eventi Speciali",
-      description: "Serate con musica tradizionale rumena",
-      category: "eventi"
+      title: "Dolci Tradizionali",
+      description: "Dessert della tradizione rumena",
+      category: "piatti",
+      image: food7,
+      type: "image"
     },
     {
       id: 9,
-      title: "Papanași",
-      description: "Il nostro dolce tradizionale",
-      category: "piatti"
+      title: "Cena Romantica",
+      description: "Piatti perfetti per una serata speciale",
+      category: "piatti",
+      image: food8,
+      type: "image"
+    },
+    {
+      id: 10,
+      title: "Menu Degustazione",
+      description: "Selezione dei nostri migliori piatti",
+      category: "piatti",
+      image: food9,
+      type: "image"
+    },
+    {
+      id: 11,
+      title: "Antipasti Freddi",
+      description: "Selezione di antipasti freddi della casa",
+      category: "piatti",
+      image: cold2,
+      type: "image"
+    },
+    {
+      id: 12,
+      title: "Piatto Freddo Speciale",
+      description: "Antipasti freddi con ingredienti freschi",
+      category: "piatti",
+      image: coldp1,
+      type: "image"
+    },
+    {
+      id: 13,
+      title: "Salumi Artigianali",
+      description: "Preparazione dei nostri salumi fatti in casa",
+      category: "piatti",
+      image: salumi1,
+      type: "video"
+    },
+    {
+      id: 14,
+      title: "Tagliere di Salumi",
+      description: "Selezione di salumi e formaggi",
+      category: "piatti",
+      image: salumi3,
+      type: "image"
+    },
+    {
+      id: 15,
+      title: "Costolette alla Griglia",
+      description: "Costolette preparate secondo tradizione",
+      category: "piatti",
+      image: costite,
+      type: "image"
+    },
+    {
+      id: 16,
+      title: "Piatto Misto",
+      description: "Assortimento delle nostre specialità",
+      category: "piatti",
+      image: mix1,
+      type: "image"
+    },
+    {
+      id: 17,
+      title: "Sala del Grotto",
+      description: "L'interno accogliente del nostro ristorante",
+      category: "ambiente",
+      image: hotel1,
+      type: "image"
+    },
+    {
+      id: 18,
+      title: "Ambiente Tradizionale",
+      description: "Atmosfera autentica e calorosa",
+      category: "ambiente",
+      image: hotel2,
+      type: "image"
+    },
+    {
+      id: 19,
+      title: "Terrazza Esterna",
+      description: "Il nostro spazio all'aperto",
+      category: "ambiente",
+      image: outside1,
+      type: "image"
+    },
+    {
+      id: 20,
+      title: "Tavolo Preparato",
+      description: "Mise en place per i nostri ospiti",
+      category: "ambiente",
+      image: table1,
+      type: "image"
+    },
+    {
+      id: 21,
+      title: "Sala Ristorante",
+      description: "I nostri tavoli pronti per accogliervi",
+      category: "ambiente",
+      image: table2,
+      type: "image"
+    },
+    {
+      id: 22,
+      title: "Cena Intima",
+      description: "Tavolo perfetto per una cena romantica",
+      category: "ambiente",
+      image: table3,
+      type: "image"
+    },
+    {
+      id: 23,
+      title: "Allestimento Elegante",
+      description: "Tavoli elegantemente apparecchiati",
+      category: "ambiente",
+      image: table4,
+      type: "image"
+    },
+    {
+      id: 24,
+      title: "Serata Speciale",
+      description: "Evento con musica tradizionale rumena",
+      category: "eventi",
+      image: evento,
+      type: "image"
+    },
+    {
+      id: 25,
+      title: "Celebrazione",
+      description: "Momenti di festa nel nostro grotto",
+      category: "eventi",
+      image: evento2,
+      type: "image"
     }
   ];
 
@@ -122,10 +295,21 @@ const GalleryPage = () => {
                   <h3>{image.title}</h3>
                   <p>{image.description}</p>
                 </div>
-                <div className="gallery-placeholder">
-                  {image.category === 'piatti' ? '🍽️' :
-                    image.category === 'ambiente' ? '🏛️' : '🎉'}
-                </div>
+                {image.type === 'video' ? (
+                  <video 
+                    src={image.image} 
+                    className="gallery-image"
+                    muted
+                    loop
+                    autoPlay
+                  />
+                ) : (
+                  <img 
+                    src={image.image} 
+                    alt={image.title}
+                    className="gallery-image"
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -138,10 +322,20 @@ const GalleryPage = () => {
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button className="lightbox-close" onClick={() => setSelectedImage(null)}>×</button>
             <div className="lightbox-image">
-              <div className="gallery-placeholder-large">
-                {selectedImage.category === 'piatti' ? '🍽️' :
-                  selectedImage.category === 'ambiente' ? '🏛️' : '🎉'}
-              </div>
+              {selectedImage.type === 'video' ? (
+                <video 
+                  src={selectedImage.image} 
+                  className="lightbox-media"
+                  controls
+                  autoPlay
+                />
+              ) : (
+                <img 
+                  src={selectedImage.image} 
+                  alt={selectedImage.title}
+                  className="lightbox-media"
+                />
+              )}
             </div>
             <div className="lightbox-info">
               <h2>{selectedImage.title}</h2>
@@ -150,21 +344,6 @@ const GalleryPage = () => {
           </div>
         </div>
       )}
-
-      {/* Instagram Section */}
-      <section className="instagram-section">
-        <div className="container">
-          <h2 className="section-title">Seguici su Instagram</h2>
-          <p className="instagram-handle">@grottolauracasaana</p>
-          <div className="instagram-grid">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="instagram-item">
-                <div className="instagram-placeholder">📸</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

@@ -43,9 +43,9 @@ function App() {
       <div className="app">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">
-            <Link className="navbar-brand" to="/" onClick={closeNavbar}>
+            <Link className="navbar-brand text-break" to="/" onClick={closeNavbar}>
               <img src={logo} alt="Grotto Laura by Casa Ana" className="logo-img" />
-              Grotto Laura by<br /> Casa Ana
+              Albergo Ristorante Grotto Laura by<br /> Casa Ana
             </Link>
             <button
               className="navbar-toggler"

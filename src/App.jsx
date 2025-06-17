@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import HomePage from './HomePage';
 import GalleryPage from './GalleryPage';
-import EventsPage from './EventsPage';
+//import EventsPage from './EventsPage';
 
 import logo from './assets/logo.png';
 

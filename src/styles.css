@@ -326,7 +326,7 @@ body {
    MENU SECTION
    ============================================ */
 .menu-section {
-  padding: 80px 0;
+  padding-top: 80px;
 }
 
 .menu-category {
@@ -408,6 +408,12 @@ body {
   background-image:
     repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139, 115, 85, 0.03) 10px, rgba(139, 115, 85, 0.03) 20px),
     repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(139, 115, 85, 0.03) 10px, rgba(139, 115, 85, 0.03) 20px);
+  z-index: 2;
+}
+
+.item-image-rustic img {
+  position: relative;
+  z-index: 2;
 }
 
 .menu-item-image {
@@ -1096,11 +1102,11 @@ body {
    ============================================ */
 .map-social-section {
   background: linear-gradient(135deg, #f5f2e8 0%, #e8e2d5 100%);
-  padding: 60px 0;
 }
 
 .map-title,
 .social-title {
+  margin-top: 80px;
   font-size: 2rem;
   color: var(--dark-green);
   margin-bottom: 25px;

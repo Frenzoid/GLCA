@@ -351,7 +351,7 @@ export const MENU_DATA = {
     {
       name: "Paella Valenciana Autentica",
       description: "Pollo o frutti di mare (minimo 2 persone). Pollo: 27.00 CHF / pers | Frutti di mare: 30.00 CHF/pers",
-      price: "🐔: 27.00 CHF | 🦐: 30.00 CHF",
+      price: "27.00 CHF - 30.00 CHF",
       image: item21,
       allergens: ["pesce"]
     },

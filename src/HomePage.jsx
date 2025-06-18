@@ -70,10 +70,10 @@ const BEVERAGE_CATEGORIES = {
 };
 
 const MENU_SECTIONS = {
-  antipasti: { title: "Insalate", emoji: "🥗" },
-  carni: { title: "Carne & Taglieri", emoji: "🥩" },
   specialita: { title: "Specialità", emoji: "⭐" },
+  carni: { title: "Carne & Taglieri", emoji: "🥩" },
   pesce: { title: "Pesce", emoji: "🐟" },
+  antipasti: { title: "Insalate", emoji: "🥗" },
   dolci: { title: "Dolci", emoji: "🍰" },
   bevande: { title: "Bevande", emoji: "🍷" }
 };
@@ -99,7 +99,7 @@ const RESTAURANT_INFO = {
     bookig: {
       url: "https://www.booking.com/Share-QWPJCuU",
       icon: bookig,
-      name: "Prenota ora"
+      name: "Booking"
     },
     tiktok: {
       url: "https://www.tiktok.com/@ristorante.casa.a",
@@ -355,7 +355,7 @@ const MENU_DATA = {
     {
       name: "Paella Valenciana Autentica",
       description: "Pollo o frutti di mare (minimo 2 persone). Pollo: 27.00 CHF / pers | Frutti di mare: 30.00 CHF/pers",
-      price: "🐔: 27.00 CHF | 🦐: 30.00 CHF",
+      price: "27.00 CHF - 30.00 CHF",
       image: item21,
       allergens: ["pesce"]
     },
@@ -554,6 +554,7 @@ const MenuSubmenu = ({ activeSection, onSectionChange }) => {
         setUnderlineStyle({
           width: buttonRect.width,
           left: buttonRect.left - submenuRect.left,
+          top: buttonRect.bottom - submenuRect.top - 4,
         });
       }
     };
@@ -623,7 +624,7 @@ const FacebookPost = ({ url }) => (
 
 // Main Component
 const HomePage = () => {
-  const [activeMenuSection, setActiveMenuSection] = useState('antipasti');
+  const [activeMenuSection, setActiveMenuSection] = useState('specialita');
   const beverageGroups = useMemo(() => getBeveragesByCategory(MENU_DATA.bevande), []);
 
   const renderActiveSection = () => {
@@ -717,7 +718,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h3 className="social-title">Seguici sui Social</h3>
+              <h3 className="social-title">Contattaci</h3>
               <div className="social-links">
                 {Object.entries(RESTAURANT_INFO.social).map(([key, social]) => (
                   <SocialLink

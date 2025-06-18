@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
 import { useAppData } from './components/DataProvider';
-import LazyImage from './components/LazyImage';
 
 // Components
 const FilterButton = ({ category, label, isActive, onClick }) => (
@@ -23,11 +22,10 @@ const GalleryItemMedia = ({ item }) => (
       aria-label={item.title}
     />
   ) : (
-    <LazyImage
+    <img
       src={item.image}
       alt={item.title}
       className="gallery-image"
-      placeholderText="📸"
     />
   )
 );
@@ -59,11 +57,10 @@ const LightboxMedia = ({ item }) => (
       aria-label={item.title}
     />
   ) : (
-    <LazyImage
+    <img
       src={item.image}
       alt={item.title}
       className="lightbox-media"
-      placeholderText="📸"
     />
   )
 );

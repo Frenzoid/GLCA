@@ -1,7 +1,6 @@
 import { FacebookEmbed } from 'react-social-media-embed';
 import { useState, useRef, useEffect } from 'react';
 import { useAppData } from './components/DataProvider';
-import LazyImage from './components/LazyImage';
 
 // Utility functions
 const getAllergenIcon = (allergen, allergenIcons) => allergenIcons[allergen] || "";
@@ -21,10 +20,9 @@ const MenuItem = ({ item, allergenIcons }) => (
   <div className="menu-item rustic">
     <div className="rustic-frame">
       <div className="item-image-rustic">
-        <LazyImage
+        <img
           src={item.image}
           alt={item.name}
-          placeholderText="🍽️"
           style={{
             width: '100%',
             height: '100%',
@@ -145,11 +143,10 @@ const SocialLink = ({ href, icon, children, iconType = "emoji" }) => (
   <a href={href} className="social-link" target="_blank" rel="noopener noreferrer">
     <span className="social-icon">
       {iconType === "image" ? (
-        <LazyImage
+        <img
           src={icon}
           alt={children}
           className="social-icon-image"
-          placeholderText="🔗"
         />
       ) : (
         icon

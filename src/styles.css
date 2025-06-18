@@ -398,7 +398,7 @@ body {
   border-bottom: 2px dashed #d4c4a0;
 }
 
-.item-image-rustic::before {
+.item-image-rustic::after {
   content: '';
   position: absolute;
   top: 0;
@@ -406,9 +406,9 @@ body {
   right: 0;
   bottom: 0;
   background-image:
-    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139, 115, 85, 0.03) 10px, rgba(139, 115, 85, 0.03) 20px),
-    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(139, 115, 85, 0.03) 10px, rgba(139, 115, 85, 0.03) 20px);
-  z-index: 2;
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139, 115, 85, 0.04) 10px, rgba(139, 115, 85, 0.04) 20px),
+    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(139, 115, 85, 0.04) 10px, rgba(139, 115, 85, 0.04) 20px);
+  z-index: 1;
 }
 
 .item-image-rustic img {

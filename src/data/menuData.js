@@ -35,7 +35,7 @@ import item45 from '../assets/menu/45.png'
 import item46 from '../assets/menu/46.png'
 import item47 from '../assets/menu/47.png'
 import item48 from '../assets/menu/48.png'
-import mici2 from '../assets/menu/mici2.jpg'
+import mici2 from '../assets/menu/mici2.png'
 
 // Logo imports
 import bookig from '../assets/booking.svg';

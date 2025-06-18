@@ -95,6 +95,7 @@ function AppContent() {
               <h5>Contatti</h5>
               <p>Caraa de San Fedee 2 <br /> 6535 Roveredo Svizzera</p>
               <p>Tel: 076 617 00 55</p>
+              <p>Email: casaanaristorante@yahoo.com</p>
             </div>
           </div>
         </div>

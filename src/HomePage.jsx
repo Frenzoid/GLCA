@@ -208,7 +208,7 @@ const HomePage = () => {
       <section className="hero-section-compact">
         <div className="hero-overlay-compact">
           <h1 className="hero-title">Casa Ana</h1>
-          <p className="hero-description">Autentica Cucina Rumena nel Cuore della Svizzera</p>
+          <p className="hero-description">Autentica Cucina Rumena e Spagnola nel Cuore della Svizzera</p>
         </div>
       </section>
 

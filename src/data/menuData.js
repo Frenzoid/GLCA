@@ -193,7 +193,7 @@ export const MENU_DATA = {
     {
       name: "Pancake con marmellata",
       description: "Pancake con marmellata di lamponi o cioccolato",
-      price: "9.00 CHF",
+      price: "19.00 CHF",
       image: item48,
       allergens: ["glutine", "lattosio", "uova"]
     }

@@ -138,7 +138,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('https://i.imgur.com/LuuI4qr.jpeg') no-repeat center;
+  background: url('https://i.imgur.com/dc5r064.jpeg') no-repeat center;
   background-size: cover;
 }
 
@@ -1881,5 +1881,188 @@ body {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   IMAGE LOADING OVERLAY
+   ============================================ */
+.image-loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-overlay {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-content {
+  max-width: 300px;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d4b896;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.loading-title {
+  color: var(--dark-green);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+}
+
+.loading-message {
+  color: var(--gray);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.loading-progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.loading-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold), #e6c157);
+  border-radius: 6px;
+  transition: width 0.2s ease-out;
+  position: relative;
+  min-width: 0;
+  box-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+}
+
+.loading-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 6px;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loading-progress-text {
+  color: var(--dark-green);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.loading-fun-message {
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   LAZY IMAGE COMPONENTS
+   ============================================ */
+.lazy-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  color: #999;
+  font-size: 2rem;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+}
+
+.lazy-image-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  color: #999;
+  font-size: 2rem;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.lazy-image-content {
+  text-align: center;
+}
+
+.lazy-image-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.lazy-image-text {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.lazy-image-loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-image-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
